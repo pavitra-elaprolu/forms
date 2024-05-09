@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="my form">
+        <input type="text" id="name"/><br><br>
+        <input type="text" id="pswd"/><br><br>
+        <input type="submit">
+    </form>
+    <script>
+        let getForm=document.getElementById("my form");
+        getForm>addEventListener("submit",()=>{
+            let ip1=document.getElementById("name").value;
+            let ip2=document.getElementById("pswd").value;
+            let userDetails={name:ip1,password:ip2};
+            let data=JSON.stringify(userDetails);
+            localStorage.setItem("userDetails",data);
+
+        });
+    </script>
+</body>
+</html>
